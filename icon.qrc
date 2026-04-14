@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>putea.png</file>
+    </qresource>
+    <qresource prefix="/arrow">
+        <file>arrowUP.png</file>
+        <file>arrow.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: black;
+}
+
+QPushButton:hover {
+    background-color: lightblue;
+    color: white;
+}
+QLineEdit {
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+}
+
+QLineEdit:hover {
+    border-color: blue;
+}
+
+QLineEdit:focus {
+    border-color: white;
+}
+
+
+
+/* Стили для QComboBox */
+QComboBox {
+    background-color: #fff;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 3px;
+    color: #333; 
+}
+
+QComboBox:hover {
+    border-color: blue; 
+}
+QComboBox QListView {
+    background-color: white;   
+    outline: 0;     
+    color: white;
+    selection-background-color: lightblue; 
+}
+
+
+/* Стили для выпадающего списка */
+QComboBox QAbstractItemView
+ {
+    background-color: #fff;
+    border: 1px solid #B5B8B1; 
+    color: #333; 
+}
+
+QComboBox QAbstractItemView::item 
+{
+    padding: 5px;
+}
+
+QComboBox QAbstractItemView::item:selected 
+{
+    background-color: #b0d4ff;
+    color: #333;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 20px;
+    height: 25px;
+    border: none;
+    image: url(:/arrow/arrow.png); /* Путь к изображению стрелки */
+}
+
+QComboBox::down-arrow {
+    width: 0;
+    height: 0;
+}
+
+QComboBox::up-arrow,
+QComboBox::down-arrow:on {
+    width: 20px;
+    height: 25px;
+    border: none;
+}
+
+QComboBox::up-arrow:on {
+    image: url(:/arrow/arrowUP.png); /* Путь к изображению стрелки в активном состоянии */
+}
+
+
+
+
+
+
+
+
+
+
+QScrollBar:vertical {
+    border: 0px solid #999999;
+    background: white;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    min-height: 0px;
+    border: 0px solid red;
+    border-radius: 5px;
+    background: qradialgradient(cx:0.5, cy:0.5, radius:1, fx:0.5, fy:0.5,
+                                stop:0 rgba(0, 120, 255, 255),
+                                stop:1 rgba(0, 200, 255, 255));
+}
+
+QScrollBar::add-line:vertical {
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar:horizontal {
+    border: 0px solid #999999;
+    background: white;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    min-width: 0px;
+    border: 0px solid red;
+    border-radius: 5px;
+    background: qradialgradient(cx:0.5, cy:0.5, radius:1, fx:0.5, fy:0.5,
+                                stop:0 rgba(0, 120, 255, 255),
+                                stop:1 rgba(0, 200, 255, 255));
+
+}
+
+QScrollBar::add-line:horizontal {
+    width: 0px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Save changes</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="4">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Стили для QTableWidget */
+QTableWidget {
+    background-color: white; /* Светлый фон */
+    border: 1px solid #d0d0d0; 
+    border-radius: 5px;
+    color: #333; /* Цвет текста */
+    gridline-color: #d0d0d0; /* Цвет сетки таблицы */
+}
+
+QTableWidget QHeaderView::section {
+    background-color: white; 
+    border: none;
+    padding: 5px;
+    color: #555; /* Цвет текста заголовков */
+}
+
+QTableWidget:item:selected {
+    background-color: lightblue; /* Изменение цвета выбранной ячейки */
+}
+
+</string>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="horizontalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QPushButton" name="pushButton_open">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Drop file or click to open Data Base</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="pushButton_execute">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Execute</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_query">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="pushButton_changeLanguage">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Change language</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_add">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="4">
+    <widget class="QComboBox" name="comboBox">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_remove">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Remove</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>pushButton_remove</tabstop>
+  <tabstop>pushButton_add</tabstop>
+  <tabstop>pushButton_changeLanguage</tabstop>
+  <tabstop>pushButton_save</tabstop>
+  <tabstop>lineEdit_query</tabstop>
+  <tabstop>pushButton_execute</tabstop>
+  <tabstop>pushButton_open</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

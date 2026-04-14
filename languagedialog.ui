@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LanguageDialog</class>
+ <widget class="QDialog" name="LanguageDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+}
+
+QLineEdit:hover {
+    border-color: blue;
+}
+
+QLineEdit:focus {
+    border-color: white;
+}
+QListView {
+    background-color: white; /* Светлый фон */
+    border: 1px solid #d0d0d0; 
+    border-radius: 5px;
+    color: #333; /* Цвет текста */
+    gridline-color: #d0d0d0; /* Цвет сетки таблицы */
+}
+QListView::item {
+    height: 40px; /* Высота элемента */
+    border: 1px solid lightgray; /* Обводка элемента */
+    padding: 5px; /* Отступы внутри элемента */
+    font-size: 14px; /* Размер шрифта */
+}
+
+QListView::item:hover {
+    background: lightgray; /* Цвет при наведении */
+}
+
+QListView::item:selected {
+    background: lightblue; /* Цвет при выборе */
+    color: white; /* Цвет текста при выборе */
+    border: none; /* Убрать обводку */
+    outline: none; /* Убрать внешний контур (outline) */
+}
+
+QListView::item:selected {
+    background: lightblue; /* Цвет при выборе */
+    color: white; /* Цвет текста при выборе */
+    border: none; /* Убрать обводку */
+    outline: none; /* Убрать внешний контур (outline) */
+}
+
+QScrollBar:vertical {
+    width: 10px; /* Ширина вертикальной полосы прокрутки */
+    background: white; /* Прозрачный фон */
+}
+
+QScrollBar::handle:vertical {
+    background: #000000; /* Цвет области прокрутки */
+    min-height: 20px; /* Минимальная высота области прокрутки */
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0; /* Сделать кнопки прокрутки невидимыми */
+}
+
+</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="2">
+    <widget class="QLabel" name="label_language">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Choose the language&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="pushButton_accept">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="pushButton_cancel">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QListView" name="listView_language">
+     <property name="styleSheet">
+      <string notr="true">QListView::item {
+    height: 40px; /* Высота элемента */
+    border: 1px solid lightgray; /* Обводка элемента */
+    padding: 5px; /* Отступы внутри элемента */
+    font-size: 14px; /* Размер шрифта */
+}
+
+QListView::item:hover {
+    background: lightgray; /* Цвет при наведении */
+}
+
+QListView::item:selected {
+    background: lightblue; /* Цвет при выборе */
+    color: white; /* Цвет текста при выборе */
+    border: none; /* Убрать обводку */
+    outline: none; /* Убрать внешний контур (outline) */
+}
+
+
+QScrollBar:vertical {
+    width: 10px; /* Ширина вертикальной полосы прокрутки */
+    background: white; /* Прозрачный фон */
+}
+
+QScrollBar::handle:vertical {
+    background: #000000; /* Цвет области прокрутки */
+    min-height: 20px; /* Минимальная высота области прокрутки */
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0; /* Сделать кнопки прокрутки невидимыми */
+}
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="horizontalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_language"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
